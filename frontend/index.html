@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sketch Application</title>
+    <title>sketch...✍🏼</title>
     <link rel="stylesheet" href="./styles/styles.css">
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
@@ -15,9 +15,17 @@
         <canvas id="sketchCanvas"></canvas>
         
         <div class="controls">
+            <!-- Dropdown menu -->
+            <select id="sketchSelector">
+                <option>👾 👾 👾 👾 👾 👾</option>
+                <option value="fundamentals">Sketch (F)undamentals</option>
+                <option value="transform">Sketch (T)ransform</option>
+                <option value="agents">Sketch (A)gents</option>
+                <!-- Add the rest of the sketches -->
+            </select>
             <!-- Buttons with logos -->
             <button id="notionBtn">
-                🔖 Notion 
+                🔖 Send to 
                 <img src="./assets/notion-logo.png" alt="Notion Logo">
             </button>
             <button id="spotifyBtn">
@@ -25,25 +33,17 @@
                 <img src="./assets/spotify-logo.png" alt="Spotify Logo">
             </button>
 
-            <!-- Dropdown menu -->
-            <select id="sketchSelector">
-                <option>Select a Sketch...</option>
-                <option value="fundamentals">Sketch (F)undamentals</option>
-                <option value="transform">Sketch (T)ransform</option>
-                <option value="agents">Sketch (A)gents</option>
-                <!-- Add the rest of the sketches -->
-            </select>
         </div>
 
         <footer>
             <p id="footer">
                 <script>
-                    document.write(new Date().toLocaleDateString() + " | ygmrtm");
+                    document.write(new Date().toISOString().slice(0, 10) + " | ygmrtm");
                 </script>
             </p>
         </footer>
     </div>
     
-    <script src="./scripts/main.js"></script>
+    <script src="./js/main.js"></script>
 </body>
 </html>
