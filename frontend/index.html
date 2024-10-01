@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sketch Application</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <canvas id="sketch-canvas"></canvas>
+        <div id="controls">
+            <select id="sketch-selector">
+                <option value="">Select a sketch</option>
+                <option value="fundamentals">Sketch Fundamentals</option>
+                <option value="transform">Sketch Transform</option>
+                <option value="agents">Sketch Agents</option>
+                <option value="noise">Sketch Noise</option>
+                <option value="type">Sketch Type</option>
+                <option value="sierpinski">The Sierpiński triangle</option>
+                <option value="tessellation">Tessellation</option>
+                <option value="game-of-life">Conway's Game of Life</option>
+                <option value="tablero-de-letras">Tablero de Letras</option>
+            </select>
+            <button id="notion-button">Notion</button>
+            <button id="spotify-button">Spotify</button>
+        </div>
+    </div>
+    <footer>
+        <p id="footer-text"></p>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/canvas-sketch/0.7.4/canvas-sketch.umd.js"></script>
+    <script src="main.js" type="module"></script>
+</body>
+</html>
