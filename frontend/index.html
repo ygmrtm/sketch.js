@@ -4,32 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sketch Application</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
+    <link rel="manifest" href="./assets/site.webmanifest">    
 </head>
 <body>
-    <div id="app">
-        <canvas id="sketch-canvas"></canvas>
-        <div id="controls">
-            <select id="sketch-selector">
-                <option value="">Select a sketch</option>
-                <option value="fundamentals">Sketch Fundamentals</option>
-                <option value="transform">Sketch Transform</option>
-                <option value="agents">Sketch Agents</option>
-                <option value="noise">Sketch Noise</option>
-                <option value="type">Sketch Type</option>
-                <option value="sierpinski">The Sierpiński triangle</option>
-                <option value="tessellation">Tessellation</option>
-                <option value="game-of-life">Conway's Game of Life</option>
-                <option value="tablero-de-letras">Tablero de Letras</option>
+    <div class="container">
+        <canvas id="sketchCanvas"></canvas>
+        
+        <div class="controls">
+            <!-- Buttons with logos -->
+            <button id="notionBtn">
+                🔖 Notion 
+                <img src="./assets/notion-logo.png" alt="Notion Logo">
+            </button>
+            <button id="spotifyBtn">
+                🎵 Spotify 
+                <img src="./assets/spotify-logo.png" alt="Spotify Logo">
+            </button>
+
+            <!-- Dropdown menu -->
+            <select id="sketchSelector">
+                <option>Select a Sketch...</option>
+                <option value="fundamentals">Sketch (F)undamentals</option>
+                <option value="transform">Sketch (T)ransform</option>
+                <option value="agents">Sketch (A)gents</option>
+                <!-- Add the rest of the sketches -->
             </select>
-            <button id="notion-button">Notion</button>
-            <button id="spotify-button">Spotify</button>
         </div>
+
+        <footer>
+            <p id="footer">
+                <script>
+                    document.write(new Date().toLocaleDateString() + " | ygmrtm");
+                </script>
+            </p>
+        </footer>
     </div>
-    <footer>
-        <p id="footer-text"></p>
-    </footer>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/canvas-sketch/0.7.4/canvas-sketch.umd.js"></script>
-    <script src="main.js" type="module"></script>
+    
+    <script src="./scripts/main.js"></script>
 </body>
 </html>

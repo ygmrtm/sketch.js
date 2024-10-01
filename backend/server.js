@@ -1,15 +1,25 @@
 const express = require('express');
-const cors = require('cors');
-const notionRoutes = require('./routes/notion');
+const path = require('path');
+const apiRoutes = require('./routes/api');
+require('dotenv').config();
 
 const app = express();
-const port = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000;
 
-app.use(cors());
+// Middleware to parse JSON
 app.use(express.json());
 
-app.use('/api/notion', notionRoutes);
+// Serve static files from the frontend directory
+app.use(express.static(path.join(__dirname, '../frontend')));
 
-app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+// API routes
+app.use('/api', apiRoutes);
+
+// Handle any requests that don't match the API routes (for front-end routing)
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../frontend/index.html'));
+});
+
+app.listen(PORT, () => {
+  console.log(`Server running on port http://localhost:${PORT}`);
 });
