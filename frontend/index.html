@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sketch...✍🏼</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
+    <link rel="manifest" href="./assets/site.webmanifest">    
+</head>
+<body>
+    <div class="container">
+        <canvas id="sketchCanvas"></canvas>
+        
+        <div class="controls">
+            <!-- Dropdown menu -->
+            <select id="sketchSelector">
+                <option>👾 👾 👾 👾 👾 👾</option>
+                <option value="fundamentals">Sketch (F)undamentals</option>
+                <option value="transform">Sketch (T)ransform</option>
+                <option value="agents">Sketch (A)gents</option>
+                <!-- Add the rest of the sketches -->
+            </select>
+            <!-- Buttons with logos -->
+            <button id="notionBtn">
+                🔖 Send to 
+                <img src="./assets/notion-logo.png" alt="Notion Logo">
+            </button>
+            <button id="spotifyBtn">
+                🎵 Spotify 
+                <img src="./assets/spotify-logo.png" alt="Spotify Logo">
+            </button>
+
+        </div>
+
+        <footer>
+            <p id="footer">
+                <script>
+                    document.write(new Date().toISOString().slice(0, 10) + " | ygmrtm");
+                </script>
+            </p>
+        </footer>
+    </div>
+    
+    <script src="./js/main.js"></script>
+</body>
+</html>
