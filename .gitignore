@@ -5,3 +5,4 @@
 .parcel-cache
 /dist
 .vscode
+coverage

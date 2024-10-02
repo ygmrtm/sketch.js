@@ -2,9 +2,18 @@ import canvasSketch from 'canvas-sketch';
 
 const settings = {
   dimensions: [800, 800],
-  //animate: true,
-  canvas: document.getElementById('sketchCanvas') // Use the existing canvas
+  canvas: null // Set canvas to null by default
 };
+
+/**
+ * Sets the canvas element to be used for rendering.
+ *
+ * @param {Element} canvasElement - The canvas element to be set.
+ */
+export function setCanvas(canvasElement) {
+  settings.canvas = canvasElement; // Function to set the canvas from outside
+};
+
 /**
  * Function that generates a sketch with random rectangles and inner rectangles based on specified dimensions.
  * 
@@ -51,7 +60,7 @@ const sketch = () => {
  * @param {number} ms - The number of milliseconds to delay the execution.
  * @returns {Promise} A promise that resolves after the specified delay.
  */
-function delay(ms) {
+export function delay(ms) {
 	return new Promise(resolve => setTimeout(resolve, ms));
 }
 
